@@ -6,10 +6,10 @@ import org.apache.log4j._
 import org.apache.spark._
 
 import scala.io.Codec
-import scala.io
+import scala.io.Source
 
 /** Find the movies with the most ratings. */
-object PopularMoviesNicer {
+class PopularMoviesNicer {
   
   /** Load up a Map of movie IDs to movie names. */
   def loadMovieNames() : Map[Int, String] = {

@@ -1,4 +1,4 @@
-package com.pbueno.spark.course.scala
+package com.pbueno.spark.course.basicscala
 
 /**
   * Created by POBO on 20/02/2017.
