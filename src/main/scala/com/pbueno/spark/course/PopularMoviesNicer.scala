@@ -9,7 +9,7 @@ import scala.io.Codec
 import scala.io.Source
 
 /** Find the movies with the most ratings. */
-class PopularMoviesNicer {
+object PopularMoviesNicer {
   
   /** Load up a Map of movie IDs to movie names. */
   def loadMovieNames() : Map[Int, String] = {
@@ -46,7 +46,7 @@ class PopularMoviesNicer {
     var nameDict = sc.broadcast(loadMovieNames)
     
     // Read in each rating line
-    val lines = sc.textFile("src/main/resources/")
+    val lines = sc.textFile("src/main/resources/u.data")
     
     // Map to (movieID, 1) tuples
     val movies = lines.map(x => (x.split("\t")(1).toInt, 1))
